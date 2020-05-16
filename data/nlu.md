@@ -55,14 +55,13 @@
 - am I talking to a bot?
 - am I talking to a human?
 
-
 ## intent:faq
 - sample FAQ question
 
-## intent: help
+## intent:help
 - sample help question
 
-## intent: query_numbers
+## intent:query_numbers
 - what is the total [confirmed](metric) in india time
 - what is the total [recovered](metric) in india time
 - what is the total [deceased](metric) in india time
@@ -87,21 +86,21 @@
 - please provide [recovered](metric) in time?
 - please provide [deceased](metric) in time?
 - please provide [active](metric) in time?
+- total [confirmed](metric) cases today
 
-## intent: enquire_organization
+## intent:enquire_organization
 - sample enquire organization question
+
+## synonym:active
+- active cases
+- active count
+- total active
+- total active cases
 
 ## synonym:confirmed
 - confirmed cases
 - confirmed count
 - total cases
-
-## synonym:recovered
-- recovered cases
-- recovered count
-- total recovered
-- recoveries
-- recovery
 
 ## synonym:deceased
 - deaths
@@ -111,9 +110,9 @@
 - died
 - died cases
 
-## synonym:active
-- active cases
-- active count
-- total active
-- total active cases
-- active
+## synonym:recovered
+- recovered cases
+- recovered count
+- total recovered
+- recoveries
+- recovery
