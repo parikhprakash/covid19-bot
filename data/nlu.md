@@ -104,6 +104,9 @@
 - Total [active](metric) cases in current month?
 - can you give me total [deceased](metric) cases for yesterday
 - total [active](metric) cases in current month
+- [Active](metric)[Active]{"entity": "metric", "value": "active"} cases yesterday
+- [Active]{"entity": "metric", "value": "active"}[Active](metric) cases today
+- [Active]{"entity": "metric", "value": "active"}[Active](metric) cases
 
 ## intent:enquire_organization
 - sample enquire organization question
