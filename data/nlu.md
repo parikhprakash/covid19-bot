@@ -5,6 +5,9 @@
 - good morning
 - good evening
 - hey there
+- Hey
+- Hi
+- Hello
 
 ## intent:goodbye
 - bye
@@ -26,6 +29,7 @@
 - don't like that
 - no way
 - not really
+- Okay
 
 ## intent:mood_great
 - perfect
@@ -36,6 +40,7 @@
 - I am feeling very good
 - I am great
 - I'm good
+- I am fine
 
 ## intent:mood_unhappy
 - sad
@@ -87,20 +92,45 @@
 - please provide [deceased](metric) in time?
 - please provide [active](metric) in time?
 - total [confirmed](metric) cases today
+- what is the total [active](metric) cases yesterday
+- what is the [active](metric) cases yesterday
+- total [confirmed](metric) cases yesterday
+- number of [recovered](metric) cases in [last ](metric)week
+- I wanted to know total number of [covid cases](metric)
+- can you get me [active](metric) cases in current month?
+- Total [active](metric) cases
+- Total [deceased](metric) cases in last month?
+- Total [active](metric) cases in current month?
+- can you give me total [deceased](metric) cases for yesterday
+- total [active](metric) cases in current month
+- can you tell ne [recovered](metric) cases for yesterday
+- can you tell me total [confirmed](metric) cases this week
+- number of [deaths](metric) yesterday
+- [Active cases](metric)[Active](metric)[Active]{"entity": "metric", "value": "active"} cases yesterday
+- [Active cases](metric)[Active]{"entity": "metric", "value": "active"} cases
+- [Active]{"entity": "metric", "value": "active"}[Active](metric) cases today
+- what is the[ recovery rate](metric)?
+- What are the total number of [recovered](metric) cases untill yesterday?
+- What are the total number of [recovered](metric) cases until yesterday?
+- What are the total number of [confirmed](metric) cases as of yesterday?
+- What is the [death rate](metric) in india?
 
 ## intent:enquire_organization
 - sample enquire organization question
 
 ## synonym:active
+- Active
 - active cases
 - active count
 - total active
 - total active cases
+- Active cases
 
 ## synonym:confirmed
 - confirmed cases
 - confirmed count
 - total cases
+- covid cases
 
 ## synonym:deceased
 - deaths
