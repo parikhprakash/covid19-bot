@@ -17,3 +17,23 @@ df['totalactive'] = df['totalconfirmed'] - df['totalrecovered'] - df['totaldecea
 import pickle
 with open('daily_data.pkl','wb') as fp:
     pickle.dump(df,fp)
+
+
+district_data_response = requests.get('https://api.covid19india.org/districts_daily.json')  
+district_datewise = district_data_response.json() 
+
+daily_data = district_datewise['districtsDaily'] 
+arr_records = []
+for state_keys in daily_data:
+    for district_keys in daily_data[state_keys]:
+        record = daily_data[state_keys][district_keys]
+        for r in record:
+            r['state']  = state_keys
+            r['district'] = district_keys
+            arr_records.append(r)
+
+df_district = pd.DataFrame(arr_records)
+with open('daily_district.pkl','wb') as fp:
+    pickle.dump(df_district,fp)
+
+

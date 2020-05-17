@@ -19,6 +19,8 @@ from dateutil import relativedelta, parser
 try:
     with open('daily_data.pkl','rb') as fp:
         df = pickle.load(fp)
+    with open('daily_district.pkl','rb') as fp:
+        df_district = pickle.load(fp)
 except:
     print("Something went wrong while reading pickle")
 
