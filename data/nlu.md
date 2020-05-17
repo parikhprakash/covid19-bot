@@ -92,7 +92,6 @@
 - please provide [deceased](metric) in time?
 - please provide [active](metric) in time?
 - total [confirmed](metric) cases today
-- [Active](metric)[Active ](metric)cases
 - what is the total [active](metric) cases yesterday
 - what is the [active](metric) cases yesterday
 - total [confirmed](metric) cases yesterday
@@ -104,16 +103,13 @@
 - Total [active](metric) cases in current month?
 - can you give me total [deceased](metric) cases for yesterday
 - total [active](metric) cases in current month
-- [Active](metric)[Active]{"entity": "metric", "value": "active"} cases yesterday
-- [Active]{"entity": "metric", "value": "active"}[Active](metric) cases today
-- [Active]{"entity": "metric", "value": "active"}[Active](metric) cases
 - can you tell ne [recovered](metric) cases for yesterday
 - can you tell me total [confirmed](metric) cases this week
 - number of [deaths](metric) yesterday
-- [Active](metric)[Active]{"entity": "metric", "value": "active"}[Active cases](metric) yesterday
-- [Active]{"entity": "metric", "value": "active"}[Active cases](metric)
-- [Active](metric)[Active]{"entity": "metric", "value": "active"} cases today
-- what is the[ recovery rate](metric)[recovery]{"entity": "metric", "value": "recovered"} rate?
+- [Active cases](metric)[Active](metric)[Active]{"entity": "metric", "value": "active"} cases yesterday
+- [Active cases](metric)[Active]{"entity": "metric", "value": "active"} cases
+- [Active]{"entity": "metric", "value": "active"}[Active](metric) cases today
+- what is the[ recovery rate](metric)?
 - What are the total number of [recovered](metric) cases untill yesterday?
 - What are the total number of [recovered](metric) cases until yesterday?
 - What are the total number of [confirmed](metric) cases as of yesterday?
