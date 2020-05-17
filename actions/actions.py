@@ -6,7 +6,7 @@
 
 
 # This is a simple example for a custom action which utters "Hello World!"
-
+from actions import process_data
 from typing import Any, Text, Dict, List
 from datetime import datetime
 from rasa_sdk import Action, Tracker
@@ -20,25 +20,7 @@ try:
     with open('daily_data.pkl','rb') as fp:
         df = pickle.load(fp)
 except:
-    import pandas as pd
-    import requests
-
-    all_data_response = requests.get('https://api.covid19india.org/data.json')
-    all_data = all_data_response.json()
-    daily_data = all_data['cases_time_series']
-
-    df = pd.DataFrame(daily_data)
-    df['date'] = df['date'].apply(lambda x: x + '2020')
-    df['date'] = pd.to_datetime(df['date'],format="%d %B %Y")
-    for col in df.columns:
-        if col != 'date':
-            df[col] = pd.to_numeric(df[col])
-
-    df['dailyactive'] = df['dailyconfirmed'] - df['dailyrecovered'] - df['dailydeceased']
-    df['totalactive'] = df['totalconfirmed'] - df['totalrecovered'] - df['totaldeceased']
-    import pickle
-    with open('daily_data.pkl','wb') as fp:
-        pickle.dump(df,fp)
+    print("Something went wrong while reading pickle")
 
 def format_time_by_grain(time, grain=None):
     grain_format = {
@@ -93,7 +75,7 @@ class QueryNumber(FormAction):
             # print(time_entity)
             additional_info = time_entity[0]['additional_info']
             print(additional_info)
-            dispatcher.utter_message("Additional Info")
+            # dispatcher.utter_message("Additional Info")
             if additional_info['type'] == 'interval':
                 from_time = parser.isoparse(additional_info['from']['value'])
                 to_time =  parser.isoparse(additional_info['to']['value'])
