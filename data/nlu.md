@@ -107,6 +107,8 @@
 - [Active](metric)[Active]{"entity": "metric", "value": "active"} cases yesterday
 - [Active]{"entity": "metric", "value": "active"}[Active](metric) cases today
 - [Active]{"entity": "metric", "value": "active"}[Active](metric) cases
+- can you tell ne [recovered](metric) cases for yesterday
+- can you tell me total [confirmed](metric) cases this week
 
 ## intent:enquire_organization
 - sample enquire organization question
