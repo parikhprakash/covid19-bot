@@ -109,16 +109,26 @@
 - [Active]{"entity": "metric", "value": "active"}[Active](metric) cases
 - can you tell ne [recovered](metric) cases for yesterday
 - can you tell me total [confirmed](metric) cases this week
+- number of [deaths](metric) yesterday
+- [Active](metric)[Active]{"entity": "metric", "value": "active"}[Active cases](metric) yesterday
+- [Active]{"entity": "metric", "value": "active"}[Active cases](metric)
+- [Active](metric)[Active]{"entity": "metric", "value": "active"} cases today
+- what is the[ recovery rate](metric)[recovery]{"entity": "metric", "value": "recovered"} rate?
+- What are the total number of [recovered](metric) cases untill yesterday?
+- What are the total number of [recovered](metric) cases until yesterday?
+- What are the total number of [confirmed](metric) cases as of yesterday?
+- What is the [death rate](metric) in india?
 
 ## intent:enquire_organization
 - sample enquire organization question
 
 ## synonym:active
+- Active
 - active cases
 - active count
 - total active
 - total active cases
-- Active
+- Active cases
 
 ## synonym:confirmed
 - confirmed cases
