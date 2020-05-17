@@ -18,7 +18,7 @@ entities:
   - help_category
   - service
   - time
-
+  - geography
 
 slots:
   metric:
@@ -42,6 +42,8 @@ slots:
   end_time:
     type: unfeaturized
   requested_slot:
+    type: unfeaturized
+  geography:
     type: unfeaturized
 
 forms:
