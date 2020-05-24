@@ -60,6 +60,8 @@ slots:
     type: text
   user_state:
     type: text
+  faq:
+    type: unfeaturized
 responses:
   utter_greet:
   - text: Hey! How are you?

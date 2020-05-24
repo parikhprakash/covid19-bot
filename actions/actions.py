@@ -148,6 +148,21 @@ class QueryNumber(FormAction):
         ))
         return []
 
+
+class ActionSetFaqSlot(Action):
+    """Returns the chitchat utterance dependent on the intent"""
+
+    def name(self) -> Text:
+        return "action_set_faq_slot"
+
+    def run(self, dispatcher, tracker, domain):
+        fullintent = tracker.latest_message["intent"].get("full_retrieval_intent")
+        if fullintent and fullintent.startswith("faq"):
+            topic = fullintent.split("/")[1]
+        else:
+            topic = None
+
+        return [SlotSet("faq", topic)]
 #
 #
 # class ActionHelloWorld(Action):
