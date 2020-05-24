@@ -12,21 +12,7 @@ intents:
 - faq
 - help
 - query_numbers
-- enquire_organization
-- faq/whatisit
-- faq/testing
-- faq/timescale
-- faq/curve
-- faq/handwashing
-- faq/symptoms
-- faq/spread
-- faq/masks
-- faq/vulnerable
-- faq/flu
-- faq/supplies
-- faq/origin
-- faq/distancing
-- faq/vaccine
+
 entities:
 - metric
 - district
