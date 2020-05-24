@@ -1,140 +1,3 @@
-## intent:greet
-- hey
-- hello
-- hi
-- good morning
-- good evening
-- hey there
-- Hey
-- Hi
-- Hello
-
-## intent:goodbye
-- bye
-- goodbye
-- see you around
-- see you later
-
-## intent:affirm
-- yes
-- indeed
-- of course
-- that sounds good
-- correct
-
-## intent:deny
-- no
-- never
-- I don't think so
-- don't like that
-- no way
-- not really
-- Okay
-
-## intent:mood_great
-- perfect
-- very good
-- great
-- amazing
-- wonderful
-- I am feeling very good
-- I am great
-- I'm good
-- I am fine
-
-## intent:mood_unhappy
-- sad
-- very sad
-- unhappy
-- bad
-- very bad
-- awful
-- terrible
-- not very good
-- extremely sad
-- so sad
-
-## intent:bot_challenge
-- are you a bot?
-- are you a human?
-- am I talking to a bot?
-- am I talking to a human?
-
-## intent:help
-- sample help question
-
-## intent:query_numbers
-- are there a lot of [cases](metric) right now?
-- does the country have a lot of [cases](metric)?
-- does the have a lot of [cases](metric)?
-- have many people [died](metric) due to covid-19?
-- how many [cases](metric) have there been
-- how many [cases of corona](metric) infection have there been?
-- how many [deaths](metric) have there been?
-- how many [fatalities](metric) have there been?
-- how many have [died](metric) due to coronavirus
-- how many have [tested positive](metric)?
-- how many people have been [infected](metric)
-- how many people have [tested positive](metric)
-- number of [cases](metric)
-- what is the [fatality](metric) number?
-- what is the [fatality rate](metric)?
-- what is the number of [cases](metric)
-- what is the number of [deaths](metric)
-- what is the number of [fatalities](metric)?
-- what is the number of [infections](metric)?
-- what number have [tested positive](metric)?
-- what number of people have been [infected](metric)?
-- what number of people have [tested positive](metric)?
-- what is the total [confirmed](metric) in india time
-- what is the total [recovered](metric) in india time
-- what is the total [deceased](metric) in india time
-- what is the total [active](metric) in india time
-- [confirmed](metric) in india?
-- [recovered](metric) in india?
-- [deceased](metric) in india?
-- [active](metric) in india?
-- how many [confirmed](metric) in india?
-- how many [recovered](metric) in india?
-- how many [deceased](metric) in india?
-- how many [active](metric) in india?
-- can you tell me [confirmed](metric) for time?
-- can you tell me [recovered](metric) for time?
-- can you tell me [deceased](metric) for time?
-- can you tell me [active](metric) for time?
-- please provide [confirmed](metric) for time?
-- please provide [recovered](metric) for time?
-- please provide [deceased](metric) for time?
-- please provide [active](metric) for time?
-- please provide [confirmed](metric) in time?
-- please provide [recovered](metric) in time?
-- please provide [deceased](metric) in time?
-- please provide [active](metric) in time?
-- total [confirmed](metric) cases today
-- what is the total [active](metric) cases yesterday
-- what is the [active](metric) cases yesterday
-- total [confirmed](metric) cases yesterday
-- number of [recovered](metric) cases in [last ](metric)week
-- I wanted to know total number of [covid cases](metric)
-- can you get me [active](metric) cases in current month?
-- Total [active](metric) cases
-- Total [deceased](metric) cases in last month?
-- Total [active](metric) cases in current month?
-- can you give me total [deceased](metric) cases for yesterday
-- total [active](metric) cases in current month
-- can you tell ne [recovered](metric) cases for yesterday
-- can you tell me total [confirmed](metric) cases this week
-- number of [deaths](metric) yesterday
-- [Active cases](metric)[Active](metric)[Active]{"entity": "metric", "value": "active"} cases yesterday
-- [Active cases](metric)[Active]{"entity": "metric", "value": "active"} cases
-- [Active]{"entity": "metric", "value": "active"}[Active](metric) cases today
-- what is the[ recovery rate](metric)?
-- What are the total number of [recovered](metric) cases untill yesterday?
-- What are the total number of [recovered](metric) cases until yesterday?
-- What are the total number of [confirmed](metric) cases as of yesterday?
-- What is the [death rate](metric) in india?
-
-
 ## intent:faq/distancing
 - am i going into quarantine?
 - are there guidelines for how to self-isolate?
@@ -422,6 +285,31 @@
 - is this similar to swine flu?
 - isn't it just a cold?
 - isn't it just a really bad cold?
+
+## intent:faq/howmany
+- are there a lot of cases right now?
+- does the country have a lot of cases?
+- does the have a lot of cases?
+- have many people died due to covid-19?
+- how many cases have there been
+- how many cases of corona infection have there been?
+- how many deaths have there been?
+- how many fatalities have there been?
+- how many have died due to coronavirus
+- how many have tested positive?
+- how many people have been infected
+- how many people have tested positive
+- number of cases
+- what is the fatality number?
+- what is the fatality rate?
+- what is the number of cases
+- what is the number of deaths
+- what is the number of fatalities?
+- what is the number of infections?
+- what number have tested positive?
+- what number of people have been infected?
+- what number of people have tested positive?
+
 
 ## intent:faq/masks
 - can a mask protect me?
@@ -784,34 +672,3 @@
 - father
 - grandmother
 - grandfather
-
-
-
-## synonym:active
-- Active
-- active cases
-- active count
-- total active
-- total active cases
-- Active cases
-
-## synonym:confirmed
-- confirmed cases
-- confirmed count
-- total cases
-- covid cases
-
-## synonym:deceased
-- deaths
-- death count
-- total death
-- total deaths
-- died
-- died cases
-
-## synonym:recovered
-- recovered cases
-- recovered count
-- total recovered
-- recoveries
-- recovery

@@ -6,7 +6,7 @@
 
 
 # This is a simple example for a custom action which utters "Hello World!"
-from actions import process_data
+from .process_data import update_pickles
 from typing import Any, Text, Dict, List
 from datetime import datetime
 from rasa_sdk import Action, Tracker
@@ -14,16 +14,26 @@ from rasa_sdk.events import SlotSet, AllSlotsReset
 from rasa_sdk.forms import FormAction
 from rasa_sdk.executor import CollectingDispatcher
 import pickle
+import os
 
 from dateutil import relativedelta, parser
-try:
-    with open('daily_data.pkl','rb') as fp:
-        df = pickle.load(fp)
-    with open('daily_district.pkl','rb') as fp:
-        df_district = pickle.load(fp)
-except:
-    print("Something went wrong while reading pickle")
 
+def check_and_reload_data():
+    if not os.path.exists('last_updated.pkl'):
+        update_pickles()
+    with open('last_updated.pkl','rb') as f:
+        dt = pickle.load(f)
+    
+    if (datetime.today() - dt).total_seconds() > 1800:
+        update_pickles()
+    try:
+        with open('daily_data.pkl','rb') as fp:
+            df = pickle.load(fp)
+        with open('daily_district.pkl','rb') as fp:
+            df_district = pickle.load(fp)
+    except:
+        print("Something went wrong while reading pickle")
+    return df, df_district
 def format_time_by_grain(time, grain=None):
     grain_format = {
         "second": "%I:%M:%S%p, %A %b %d, %Y",
@@ -34,10 +44,6 @@ def format_time_by_grain(time, grain=None):
     }
     timeformat = grain_format.get(grain, "%I:%M%p, %A %b %d, %Y")
     return time.strftime(timeformat)
-
-
-
-
 
 class QueryNumber(FormAction):
     def name(self):
@@ -53,6 +59,7 @@ class QueryNumber(FormAction):
                     domain: Dict[Text, Any],
                 ) -> List[Dict]:
         #read pickle file
+        df, _ = check_and_reload_data()
         if tracker.get_slot('time') is None:
             date_query = datetime.today().date()
             print(date_query)
@@ -135,6 +142,10 @@ class QueryNumber(FormAction):
         # print(tracker.slots)
         # print(tracker.latest_message)
         # dispatcher.utter_message("Here is your number")
+        dispatcher.utter_message("Overall Numbers till now. Total:{}, Active:{}, Deaths: {}, Recovered: {}:".format(
+            df['dailyconfirmed'].sum(), df['dailyactive'].sum(),
+            df['dailydeceased'].sum(), df['dailyrecovered'].sum()
+        ))
         return []
 
 #
