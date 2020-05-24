@@ -46,6 +46,9 @@ slots:
   geography:
     type: unfeaturized
 
+actions:
+  - respond_faq
+
 forms:
   - form_reply_number
 
