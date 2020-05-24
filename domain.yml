@@ -1,78 +1,87 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - faq
-  - help
-  - query_numbers
-  - enquire_organization
-
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- faq
+- help
+- query_numbers
+- enquire_organization
+- faq/whatisit
+- faq/testing
+- faq/timescale
+- faq/curve
+- faq/handwashing
+- faq/symptoms
+- faq/spread
+- faq/masks
+- faq/vulnerable
+- faq/flu
+- faq/supplies
+- faq/origin
+- faq/distancing
+- faq/vaccine
 entities:
-  - metric
-  - district
-  - state
-  - help_category
-  - service
-  - time
-  - geography
-
+- metric
+- district
+- state
+- help_category
+- service
+- time
+- geography
 slots:
-  metric:
-    type: text
   district:
     type: text
-  state:
-    type: text
+  end_time:
+    type: unfeaturized
+  geography:
+    type: unfeaturized
   help_category:
     type: text
+  metric:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
   service:
     type: text
+  start_time:
+    type: unfeaturized
+  state:
+    type: text
+  time:
+    type: unfeaturized
   user_city:
     type: text
   user_state:
     type: text
-  time:
-    type: unfeaturized
-  start_time:
-    type: unfeaturized
-  end_time:
-    type: unfeaturized
-  requested_slot:
-    type: unfeaturized
-  geography:
-    type: unfeaturized
-
-actions:
-  - respond_faq
-
-forms:
-  - form_reply_number
-
-
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
+  - text: Hey! How are you?
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: "Did that help you?"
-
+  - text: Did that help you?
   utter_happy:
-  - text: "Great, carry on!"
-
+  - text: Great, carry on!
   utter_goodbye:
-  - text: "Bye"
-
+  - text: Bye
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  - text: I am a bot, powered by Rasa.
+actions:
+- respond_faq
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- action_set_faq_slot
+forms:
+- form_reply_number
